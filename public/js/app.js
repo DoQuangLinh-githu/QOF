@@ -1,12 +1,13 @@
 // =============================================
-// APP.JS - QOF (Có liên kết ngược với EcoSphere)
+// APP.JS - QOF (Sản xuất nông nghiệp)
 // =============================================
 
-// URL của web EcoSphere
-const ECOSPHERE_URL = 'http://localhost:3001';
+// URL của web IDSEA (đã deploy trên Vercel)
+const IDSEA_URL = 'https://eco-sphere-xi-seven.vercel.app/';
 
 function initApp() {
     console.log('🌾 QUYNH ORGANIC FARM - Đã khởi động!');
+    console.log('🔗 Liên kết IDSEA:', IDSEA_URL);
     
     // Render footer
     if (typeof renderFooter === 'function') {
@@ -20,7 +21,6 @@ function initApp() {
         if (header) {
             header.addEventListener('click', function(e) {
                 e.stopPropagation();
-                // Đóng các menu khác
                 navItems.forEach(other => {
                     if (other !== item) {
                         other.classList.remove('open');
@@ -43,17 +43,15 @@ function initApp() {
         }
     }
     
-    // ===== 3. XỬ LÝ CLICK VÀO 7 MỤC CON (GIỮ NGUYÊN) =====
+    // ===== 3. XỬ LÝ CLICK VÀO 7 MỤC CON =====
     const menuItems = document.querySelectorAll('.submenu-vertical li');
     menuItems.forEach(item => {
         item.addEventListener('click', function(e) {
             e.stopPropagation();
             
-            // Bỏ active cũ
             menuItems.forEach(i => i.classList.remove('active'));
             this.classList.add('active');
             
-            // Lấy pageId và render
             const pageId = this.dataset.production;
             if (pageId && typeof renderProductionContent === 'function') {
                 renderProductionContent(pageId);
@@ -61,27 +59,22 @@ function initApp() {
         });
     });
     
-    // ===== 4. XỬ LÝ LIÊN KẾT NGƯỢC VỚI ECOSPHERE =====
-    // Tất cả các mục có data-link="true" sẽ chuyển sang EcoSphere
+    // ===== 4. XỬ LÝ LIÊN KẾT NGƯỢC VỚI IDSEA =====
     const linkItems = document.querySelectorAll('[data-link="true"]');
     linkItems.forEach(item => {
         item.addEventListener('click', function(e) {
             e.stopPropagation();
             e.preventDefault();
-            
-            // Mở EcoSphere trong tab mới
-            window.open(ECOSPHERE_URL, '_blank');
+            window.open(IDSEA_URL, '_blank');
         });
     });
     
     // ===== 5. MẶC ĐỊNH: MỞ SẴN MENU =====
-    // Mở menu Nông nghiệp
     const agriMenu = document.getElementById('menu-production');
     if (agriMenu) {
         agriMenu.classList.add('open');
     }
     
-    // Mở submenu Sản xuất nông nghiệp
     if (productionParent) {
         productionParent.classList.add('open');
     }
