@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🌾 QUYNH ORGANIC FARM - Sản xuất nông nghiệp</title>
+    
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/js/data/agriculture/agriculture.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+<div class="app-container">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+        <div class="logo">
+            <i class="fas fa-leaf"></i>
+            <span>QOF</span>
+            <span style="font-size: 0.6rem; opacity: 0.5; margin-left: auto;">v1.0</span>
+        </div>
+
+        <nav class="nav-menu">
+            <ul>
+                <!-- ===== MÔI TRƯỜNG ===== -->
+                <li class="nav-item has-submenu">
+                    <div class="nav-header" data-menu="environment">
+                        <i class="fas fa-tree"></i>
+                        <span>🌿 Môi trường</span>
+                        <i class="fas fa-chevron-down arrow"></i>
+                    </div>
+                    <ul class="submenu" id="submenu-environment">
+                        <li data-sub="climate" data-link="true">
+                            <i class="fas fa-temperature-high"></i> Biến đổi khí hậu
+                            <i class="fas fa-external-link-alt" style="font-size: 0.6rem; margin-left: auto; opacity: 0.4;"></i>
+                        </li>
+                        <li data-sub="ghg" data-link="true">
+                            <i class="fas fa-smog"></i> Khí nhà kính
+                            <i class="fas fa-external-link-alt" style="font-size: 0.6rem; margin-left: auto; opacity: 0.4;"></i>
+                        </li>
+                        <li data-sub="modeling" data-link="true">
+                            <i class="fas fa-chart-bar"></i> Mô hình hóa
+                            <i class="fas fa-external-link-alt" style="font-size: 0.6rem; margin-left: auto; opacity: 0.4;"></i>
+                        </li>
+                        <li data-sub="gisdb" data-link="true">
+                            <i class="fas fa-map"></i> GIS &amp; CSDL
+                            <i class="fas fa-external-link-alt" style="font-size: 0.6rem; margin-left: auto; opacity: 0.4;"></i>
+                        </li>
+                    </ul>
+                </li>
+
+                <!-- ===== XÃ HỘI ===== -->
+                <li class="nav-item has-submenu">
+                    <div class="nav-header" data-menu="society">
+                        <i class="fas fa-users"></i>
+                        <span>👥 Xã hội</span>
+                        <i class="fas fa-chevron-down arrow"></i>
+                    </div>
+                    <ul class="submenu" id="submenu-society">
+                        <li data-menu="society" data-link="true">
+                            <i class="fas fa-globe-asia"></i> Xã hội &amp; Phát triển
+                            <i class="fas fa-external-link-alt" style="font-size: 0.6rem; margin-left: auto; opacity: 0.4;"></i>
+                        </li>
+                    </ul>
+                </li>
+
+                <!-- ===== NÔNG NGHIỆP ===== -->
+                <li class="nav-item has-submenu open" id="menu-production">
+                    <div class="nav-header" id="production-header">
+                        <i class="fas fa-seedling"></i>
+                        <span>🌾 Nông nghiệp</span>
+                        <i class="fas fa-chevron-down arrow" id="production-arrow"></i>
+                    </div>
+                    <ul class="submenu" id="production-submenu">
+                        <!-- Công nghệ cao - CHUYỂN SANG ECOSPHERE -->
+                        <li data-sub-agri="high-tech" data-link="true" style="border-left: 2px solid #4c8b35;">
+                            <i class="fas fa-microchip"></i> Công nghệ cao
+                            <i class="fas fa-external-link-alt" style="font-size: 0.6rem; margin-left: auto; opacity: 0.6; color: #4c8b35;"></i>
+                        </li>
+                        
+                        <!-- Sản xuất nông nghiệp - GIỮ NGUYÊN (không chuyển) -->
+                        <li class="has-submenu-vertical open">
+                            <div class="submenu-header">
+                                <span><i class="fas fa-tractor"></i> Sản xuất nông nghiệp</span>
+                                <i class="fas fa-chevron-down arrow-vertical"></i>
+                            </div>
+                            <ul class="submenu-vertical">
+                                <li data-production="trangChu" class="active"><i class="fas fa-home"></i> Trang chủ</li>
+                                <li data-production="gioiThieu"><i class="fas fa-info-circle"></i> Giới thiệu</li>
+                                <li data-production="sanPham"><i class="fas fa-box-open"></i> Sản phẩm</li>
+                                <li data-production="quanHeCoDong"><i class="fas fa-chart-pie"></i> Quan hệ cổ đông</li>
+                                <li data-production="tinTuc"><i class="fas fa-newspaper"></i> Tin tức</li>
+                                <li data-production="doiTac"><i class="fas fa-handshake"></i> Đối tác</li>
+                                <li data-production="lienHe"><i class="fas fa-phone-alt"></i> Liên hệ</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- NÚT QUAY LẠI ECOSPHERE -->
+        <div style="padding: 1rem 1.5rem; border-top: 1px solid rgba(255,255,255,0.1); margin-top: auto;">
+            <a href="http://localhost:3001" target="_blank" 
+               style="display: flex; align-items: center; gap: 0.8rem; 
+                      color: rgba(255,255,255,0.6); text-decoration: none; 
+                      padding: 0.5rem 0; transition: 0.3s; font-size: 0.85rem;"
+               onmouseover="this.style.color='white'; this.style.transform='translateX(5px)'"
+               onmouseout="this.style.color='rgba(255,255,255,0.6)'; this.style.transform='translateX(0)'">
+                <i class="fas fa-arrow-left"></i>
+                <span>🌍 Quay lại EcoSphere</span>
+                <i class="fas fa-external-link-alt" style="font-size: 0.6rem; margin-left: auto;"></i>
+            </a>
+        </div>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+        <div class="hero hero-agriculture" id="hero">
+            <div style="display: flex; align-items: center; gap: 1.5rem; flex-wrap: wrap;">
+                <i class="fas fa-seedling" style="font-size: 3rem; color: #ff8a65; background: white; padding: 10px; border-radius: 15px;"></i>
+                <div>
+                    <h1><i class="fas fa-charging-station"></i> QUYNH ORGANIC FARM</h1>
+                    <p>NÔNG SẢN SẠCH - An toàn - Chất lượng</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-area" id="dynamic-content">
+            <div style="text-align: center; padding: 3rem 0; color: #888;">
+                <i class="fas fa-spinner fa-spin" style="font-size: 2rem;"></i>
+                <p style="margin-top: 1rem;">Đang tải dữ liệu...</p>
+            </div>
+        </div>
+
+        <div class="footer-note">
+            <span><i class="fas fa-leaf"></i> Nông nghiệp bền vững</span>
+            <span><i class="fas fa-handshake"></i> Hợp tác phát triển</span>
+            <span><i class="fas fa-globe"></i> Hội nhập quốc tế</span>
+        </div>
+    </main>
+</div>
+
+<!-- ===== JAVASCRIPT ===== -->
+<script src="/js/data/init.js"></script>
+<script src="/js/data/footer.js"></script>
+<script src="/js/data/agriculture/agricultureRenderer.js"></script>
+<script src="/js/data/agriculture/production/trangChu.js"></script>
+<script src="/js/data/agriculture/production/gioiThieu.js"></script>
+<script src="/js/data/agriculture/production/sanPham.js"></script>
+<script src="/js/data/agriculture/production/quanHeCoDong.js"></script>
+<script src="/js/data/agriculture/production/tinTuc.js"></script>
+<script src="/js/data/agriculture/production/doiTac.js"></script>
+<script src="/js/data/agriculture/production/lienHe.js"></script>
+<script src="/js/renderer.js"></script>
+<script src="/js/app.js"></script>
+
+</body>
+</html>
