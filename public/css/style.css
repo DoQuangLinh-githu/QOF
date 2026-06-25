@@ -48,7 +48,7 @@ body {
 }
 
 /* ============================================
-   NAVIGATION MENU
+   NAVIGATION MENU - 7 MỤC CON
    ============================================ */
 .nav-menu {
   flex: 1;
@@ -63,213 +63,36 @@ body {
 
 .nav-item {
   margin-bottom: 0.25rem;
+  cursor: pointer;
 }
 
-.nav-header {
+.nav-item .nav-header {
   padding: 0.75rem 1.5rem;
   display: flex;
   align-items: center;
   gap: 0.8rem;
-  cursor: pointer;
   transition: 0.2s;
   font-weight: 500;
   border-radius: 8px;
   margin: 0 0.5rem;
-}
-
-.nav-header:hover {
-  background: rgba(255,255,255,0.1);
-}
-
-.nav-header i:first-child {
-  width: 24px;
-}
-
-.nav-header .arrow {
-  margin-left: auto;
-  transition: transform 0.3s ease;
-}
-
-.nav-item.open .nav-header .arrow {
-  transform: rotate(180deg);
-}
-
-/* ============================================
-   SUBMENU CHÍNH
-   ============================================ */
-.submenu {
-  list-style: none;
-  padding: 0.5rem 0.5rem 0.5rem 1.5rem;
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.4s ease-in-out, opacity 0.3s ease-in-out;
-  opacity: 0;
-}
-
-.nav-item.open .submenu {
-  max-height: 500px;
-  opacity: 1;
-}
-
-/* Style cho các mục trong submenu */
-.submenu li {
-  padding: 0.7rem 1rem;
-  display: flex;
-  align-items: center;
-  gap: 0.8rem;
-  cursor: pointer;
-  border-radius: 8px;
-  transition: all 0.2s ease;
-  font-size: 0.9rem;
   color: rgba(255,255,255,0.8);
 }
 
-.submenu li:hover {
+.nav-item .nav-header:hover {
   background: rgba(255,255,255,0.1);
   color: white;
   transform: translateX(5px);
 }
 
-.submenu li.active {
+.nav-item.active .nav-header {
   background: rgba(255,255,255,0.15);
   color: #d4e6b3;
   border-left: 3px solid #d4e6b3;
 }
 
-.submenu li i {
+.nav-item .nav-header i {
   width: 24px;
   font-size: 1rem;
-}
-
-/* ============================================
-   SUBMENU DỌC (Sản xuất nông nghiệp)
-   ============================================ */
-.submenu li.has-submenu-vertical {
-  display: block;
-  cursor: pointer;
-  padding: 0;
-}
-
-.submenu-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0.7rem 1rem;
-  width: 100%;
-  border-radius: 8px;
-  transition: all 0.2s ease;
-  color: rgba(255,255,255,0.8);
-}
-
-.submenu-header:hover {
-  background: rgba(255,255,255,0.1);
-  color: white;
-}
-
-.submenu-header span {
-  display: flex;
-  align-items: center;
-  gap: 0.8rem;
-}
-
-.submenu-header .arrow-vertical {
-  font-size: 0.7rem;
-  transition: transform 0.3s ease;
-}
-
-.submenu li.has-submenu-vertical.open .arrow-vertical {
-  transform: rotate(180deg);
-}
-
-.submenu-vertical {
-  list-style: none;
-  padding-left: 2rem;
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.3s ease;
-}
-
-.submenu li.has-submenu-vertical.open .submenu-vertical {
-  max-height: 400px;
-}
-
-.submenu-vertical li {
-  padding: 0.5rem 1rem;
-  display: flex;
-  align-items: center;
-  gap: 0.8rem;
-  cursor: pointer;
-  border-radius: 8px;
-  transition: all 0.2s ease;
-  font-size: 0.85rem;
-  color: rgba(255,255,255,0.7);
-}
-
-.submenu-vertical li:hover {
-  background: rgba(255,255,255,0.1);
-  color: white;
-  transform: translateX(5px);
-}
-
-.submenu-vertical li.active {
-  background: rgba(255,255,255,0.15);
-  color: #d4e6b3;
-  border-left: 3px solid #d4e6b3;
-}
-
-.submenu-vertical li i {
-  width: 20px;
-  font-size: 0.85rem;
-}
-
-/* ============================================
-   LINK NGƯỢC VỚI ECOSPHERE
-   ============================================ */
-
-/* Style cho các mục có data-link="true" */
-[data-link="true"] {
-  cursor: pointer;
-  position: relative;
-  transition: all 0.3s ease;
-}
-
-[data-link="true"]:hover {
-  background: rgba(255,255,255,0.15) !important;
-  transform: translateX(5px);
-}
-
-/* Icon external link */
-[data-link="true"] .fa-external-link-alt {
-  transition: transform 0.3s ease;
-}
-
-[data-link="true"]:hover .fa-external-link-alt {
-  transform: rotate(-45deg) scale(1.1);
-}
-
-/* Công nghệ cao - nổi bật */
-[data-sub-agri="high-tech"][data-link="true"] {
-  border-left: 3px solid #4c8b35 !important;
-}
-
-[data-sub-agri="high-tech"][data-link="true"]:hover {
-  border-left-color: #6ab04c !important;
-  color: #6ab04c !important;
-}
-
-/* Tooltip khi hover */
-[data-link="true"]::after {
-  content: ' → Chuyển đến EcoSphere';
-  position: absolute;
-  right: 10px;
-  font-size: 0.6rem;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  color: #ff8a65;
-}
-
-[data-link="true"]:hover::after {
-  opacity: 1;
 }
 
 /* ============================================
@@ -586,33 +409,6 @@ body {
     grid-template-columns: 1fr;
     gap: 0.8rem;
   }
-  
-  .submenu {
-    padding-left: 0.5rem;
-  }
-  
-  .submenu li {
-    padding: 0.6rem 0.8rem;
-    font-size: 0.85rem;
-  }
-  
-  .submenu-vertical {
-    padding-left: 1rem;
-  }
-  
-  .submenu-vertical li {
-    padding: 0.5rem 0.8rem;
-    font-size: 0.8rem;
-  }
-  
-  /* Ẩn tooltip trên mobile */
-  [data-link="true"]::after {
-    display: none;
-  }
-  
-  [data-link="true"] .fa-external-link-alt {
-    font-size: 0.5rem !important;
-  }
 }
 
 @media (max-width: 480px) {
@@ -664,25 +460,5 @@ body {
   .agri-card-image-caption {
     font-size: 0.65rem;
     padding: 0.3rem 0.6rem;
-  }
-  
-  .submenu li {
-    padding: 0.5rem 0.6rem;
-    font-size: 0.8rem;
-  }
-  
-  .submenu li i {
-    width: 20px;
-    font-size: 0.85rem;
-  }
-  
-  .submenu-vertical li {
-    padding: 0.4rem 0.6rem;
-    font-size: 0.75rem;
-  }
-  
-  .submenu-vertical li i {
-    width: 18px;
-    font-size: 0.8rem;
   }
 }

@@ -23,80 +23,48 @@
 
         <nav class="nav-menu">
             <ul>
-                <!-- ===== MÔI TRƯỜNG ===== -->
-                <li class="nav-item has-submenu">
-                    <div class="nav-header" data-menu="environment">
-                        <i class="fas fa-tree"></i>
-                        <span>🌿 Môi trường</span>
-                        <i class="fas fa-chevron-down arrow"></i>
+                <!-- ===== 7 MỤC CON TRỰC TIẾP ===== -->
+                <li data-production="trangChu" class="nav-item active">
+                    <div class="nav-header" style="background: rgba(255,255,255,0.1);">
+                        <i class="fas fa-home"></i>
+                        <span>Trang chủ</span>
                     </div>
-                    <ul class="submenu" id="submenu-environment">
-                        <li data-sub="gisai" data-link="true">
-                            <i class="fas fa-map"></i> GIS &amp; CSDL (AI)
-                            <i class="fas fa-external-link-alt" style="font-size: 0.6rem; margin-left: auto; opacity: 0.4;"></i>
-                        </li>
-                        <li data-sub="modeling" data-link="true">
-                            <i class="fas fa-chart-bar"></i> Mô hình hóa
-                            <i class="fas fa-external-link-alt" style="font-size: 0.6rem; margin-left: auto; opacity: 0.4;"></i>
-                        </li>
-                        <li data-sub="renewable" data-link="true">
-                            <i class="fas fa-solar-panel"></i> Năng lượng tái tạo
-                            <i class="fas fa-external-link-alt" style="font-size: 0.6rem; margin-left: auto; opacity: 0.4;"></i>
-                        </li>
-                        <li data-sub="climate" data-link="true">
-                            <i class="fas fa-temperature-high"></i> Khí nhà kính &amp; BĐKH
-                            <i class="fas fa-external-link-alt" style="font-size: 0.6rem; margin-left: auto; opacity: 0.4;"></i>
-                        </li>
-                    </ul>
                 </li>
-
-                <!-- ===== XÃ HỘI ===== -->
-                <li class="nav-item has-submenu">
-                    <div class="nav-header" data-menu="society">
-                        <i class="fas fa-users"></i>
-                        <span>👥 Xã hội</span>
-                        <i class="fas fa-chevron-down arrow"></i>
+                <li data-production="gioiThieu" class="nav-item">
+                    <div class="nav-header">
+                        <i class="fas fa-info-circle"></i>
+                        <span>Giới thiệu</span>
                     </div>
-                    <ul class="submenu" id="submenu-society">
-                        <li data-menu="society" data-link="true">
-                            <i class="fas fa-globe-asia"></i> Phát triển bền vững
-                            <i class="fas fa-external-link-alt" style="font-size: 0.6rem; margin-left: auto; opacity: 0.4;"></i>
-                        </li>
-                    </ul>
                 </li>
-
-                <!-- ===== NÔNG NGHIỆP ===== -->
-                <li class="nav-item has-submenu open" id="menu-production">
-                    <div class="nav-header" id="production-header">
-                        <i class="fas fa-seedling"></i>
-                        <span>🌾 Nông nghiệp</span>
-                        <i class="fas fa-chevron-down arrow" id="production-arrow"></i>
+                <li data-production="sanPham" class="nav-item">
+                    <div class="nav-header">
+                        <i class="fas fa-box-open"></i>
+                        <span>Sản phẩm</span>
                     </div>
-                    <ul class="submenu" id="production-submenu">
-                        <!-- Công nghệ cao - CHUYỂN SANG IDSEA -->
-                        <li data-sub-agri="high-tech" data-link="true" style="border-left: 2px solid #4c8b35;">
-                            <i class="fas fa-microchip"></i> Công nghệ cao
-                            <i class="fas fa-external-link-alt" style="font-size: 0.6rem; margin-left: auto; opacity: 0.6; color: #4c8b35;"></i>
-                        </li>
-                        
-                        <!-- Sản xuất nông nghiệp - GIỮ NGUYÊN -->
-                        <li class="has-submenu-vertical open">
-                            <div class="submenu-header">
-                                <span><i class="fas fa-tractor"></i> Sản xuất nông nghiệp</span>
-                                <span style="font-size: 0.5rem; opacity: 0.5; background: rgba(255,138,101,0.2); padding: 2px 8px; border-radius: 10px;">QOF</span>
-                                <i class="fas fa-chevron-down arrow-vertical"></i>
-                            </div>
-                            <ul class="submenu-vertical">
-                                <li data-production="trangChu" class="active"><i class="fas fa-home"></i> Trang chủ</li>
-                                <li data-production="gioiThieu"><i class="fas fa-info-circle"></i> Giới thiệu</li>
-                                <li data-production="sanPham"><i class="fas fa-box-open"></i> Sản phẩm</li>
-                                <li data-production="quanHeCoDong"><i class="fas fa-chart-pie"></i> Quan hệ cổ đông</li>
-                                <li data-production="tinTuc"><i class="fas fa-newspaper"></i> Tin tức</li>
-                                <li data-production="doiTac"><i class="fas fa-handshake"></i> Đối tác</li>
-                                <li data-production="lienHe"><i class="fas fa-phone-alt"></i> Liên hệ</li>
-                            </ul>
-                        </li>
-                    </ul>
+                </li>
+                <li data-production="quanHeCoDong" class="nav-item">
+                    <div class="nav-header">
+                        <i class="fas fa-chart-pie"></i>
+                        <span>Quan hệ cổ đông</span>
+                    </div>
+                </li>
+                <li data-production="tinTuc" class="nav-item">
+                    <div class="nav-header">
+                        <i class="fas fa-newspaper"></i>
+                        <span>Tin tức</span>
+                    </div>
+                </li>
+                <li data-production="doiTac" class="nav-item">
+                    <div class="nav-header">
+                        <i class="fas fa-handshake"></i>
+                        <span>Đối tác</span>
+                    </div>
+                </li>
+                <li data-production="lienHe" class="nav-item">
+                    <div class="nav-header">
+                        <i class="fas fa-phone-alt"></i>
+                        <span>Liên hệ</span>
+                    </div>
                 </li>
             </ul>
         </nav>
